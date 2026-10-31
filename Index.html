@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketing Specialist - Portafolio Profesional</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#0B2B1B',      /* Verde Bosque Oscuro */
+                            card: '#123B26',      /* Verde Bosque Medio */
+                            light: '#17472F',     /* Verde Hover */
+                            lime: '#8BF512',      /* Verde Lima Neón */
+                            limeHover: '#76d60d',
+                            cream: '#F4F7F4',     /* Fondo claro suave */
+                            border: '#1f5438'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    keyframes: {
+                        marquee: {
+                            '0%': { transform: 'translateX(0%)' },
+                            '100%': { transform: 'translateX(-50%)' },
+                        }
+                    },
+                    animation: {
+                        marquee: 'marquee 25s linear infinite',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Personalización de scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0B2B1B;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1f5438;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #8BF512;
+        }
+    </style>
+</head>
+<body class="bg-brand-cream text-slate-800 font-sans antialiased selection:bg-brand-lime selection:text-brand-dark">
+
+    <!-- NAV BAR -->
+    <header class="fixed top-0 left-0 w-full z-40 bg-brand-dark/90 backdrop-blur-md border-b border-brand-border text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#inicio" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-xl bg-brand-lime text-brand-dark flex items-center justify-center font-extrabold text-xl shadow-lg shadow-brand-lime/20 group-hover:scale-105 transition-transform">
+                    MS
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-bold text-lg tracking-tight leading-none group-hover:text-brand-lime transition-colors">Marketing Specialist</span>
+                    <span class="text-xs text-slate-400 font-medium">Growth & Data Analytics</span>
+                </div>
+            </a>
+
+            <!-- Menu Links Desktop -->
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                <a href="#inicio" class="text-slate-300 hover:text-brand-lime transition-colors">Inicio</a>
+                <a href="#resumen" class="text-slate-300 hover:text-brand-lime transition-colors">Resumen</a>
+                <a href="#casos" class="text-slate-300 hover:text-brand-lime transition-colors">Casos de Estudio</a>
+                <a href="#contacto" class="text-slate-300 hover:text-brand-lime transition-colors">Contacto</a>
+            </nav>
+
+            <!-- Status Badge & CTA -->
+            <div class="hidden lg:flex items-center gap-4">
+                <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-card text-xs text-slate-200 border border-brand-border">
+                    <span class="w-2 h-2 rounded-full bg-brand-lime animate-pulse"></span>
+                    Disponible para Proyectos
+                </span>
+                <a href="#contacto" class="px-5 py-2.5 rounded-full bg-brand-lime text-brand-dark font-semibold text-sm hover:bg-brand-limeHover transition-all transform hover:-translate-y-0.5 shadow-md shadow-brand-lime/20">
+                    Contactar
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-slate-300 hover:text-white p-2">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-dark border-b border-brand-border px-4 pt-2 pb-6 space-y-3">
+            <a href="#inicio" class="block py-2 text-slate-300 hover:text-brand-lime font-medium">Inicio</a>
+            <a href="#resumen" class="block py-2 text-slate-300 hover:text-brand-lime font-medium">Resumen</a>
+            <a href="#casos" class="block py-2 text-slate-300 hover:text-brand-lime font-medium">Casos de Estudio</a>
+            <a href="#contacto" class="block py-2 text-slate-300 hover:text-brand-lime font-medium">Contacto</a>
+            <div class="pt-2">
+                <a href="#contacto" class="block w-full text-center py-2.5 rounded-full bg-brand-lime text-brand-dark font-bold text-sm">
+                    Contactar Ahora
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="inicio" class="pt-28 lg:pt-36 pb-16 bg-brand-dark text-white relative overflow-hidden">
+        <!-- Background Grid Pattern Accent -->
+        <div class="absolute inset-0 opacity-10 pointer-events-none bg-[radial-gradient(#8BF512_1px,transparent_1px)] [background-size:24px_24px]"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Main Copy -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-card text-brand-lime text-xs font-semibold tracking-wide border border-brand-border">
+                        <i class="fa-solid fa-chart-line"></i>
+                        ESTRATEGIA DIGITAL & CRECIMIENTO BASADO EN DATA
+                    </div>
+                    
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight">
+                        Transformo datos en <span class="text-brand-lime">estrategias de marketing</span> escalables.
+                    </h1>
+                    
+                    <p class="text-slate-300 text-lg sm:text-xl max-w-2xl font-light leading-relaxed mx-auto lg:mx-0">
+                        Especialista en Marketing 360° enfocado en optimización de conversion rate, pauta digital rentable, automatización de procesos comercial/CRM y posicionamiento de marcas.
+                    </p>
+
+                    <div class="pt-4 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="#casos" class="px-8 py-4 rounded-full bg-brand-lime text-brand-dark font-bold text-base hover:bg-brand-limeHover transition-all transform hover:-translate-y-0.5 shadow-lg shadow-brand-lime/20 flex items-center justify-center gap-2">
+                            Ver Casos de Estudio <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                        <a href="#contacto" onclick="downloadCV()" class="px-8 py-4 rounded-full bg-brand-card text-white hover:bg-brand-light font-semibold text-base border border-brand-border transition-all flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-download"></i> Descargar CV
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Visual Collage Card (Inspired by reference image) -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <!-- Main Frame -->
+                        <div class="bg-brand-card p-6 rounded-3xl border border-brand-border shadow-2xl relative">
+                            <div class="relative h-72 sm:h-80 rounded-2xl overflow-hidden bg-slate-900 mb-4 border border-brand-border/50">
+                                <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&q=80" alt="Marketing Specialist" class="w-full h-full object-cover opacity-90 hover:scale-105 transition-transform duration-500">
+                                <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/90 via-transparent to-transparent"></div>
+                                <div class="absolute bottom-4 left-4 right-4">
+                                    <span class="text-brand-lime text-xs font-bold uppercase tracking-wider">Metodología de trabajo</span>
+                                    <h3 class="text-white font-bold text-lg">Performance + Brand Strategy</h3>
+                                </div>
+                            </div>
+
+                            <!-- Floating Badge 1 -->
+                            <div class="absolute -top-6 -right-4 sm:-right-6 bg-brand-lime text-brand-dark p-4 rounded-2xl shadow-xl border border-white/20 flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-xl bg-brand-dark/10 flex items-center justify-center text-xl">
+                                    <i class="fa-solid fa-arrow-trend-up"></i>
+                                </div>
+                                <div>
+                                    <div class="text-xs font-bold uppercase">Promedio ROAS</div>
+                                    <div class="text-xl font-extrabold">3.8x</div>
+                                </div>
+                            </div>
+
+                            <!-- Floating Badge 2 -->
+                            <div class="absolute -bottom-6 -left-4 sm:-left-6 bg-slate-900 text-white p-4 rounded-2xl shadow-xl border border-brand-border flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-xl bg-brand-lime/20 text-brand-lime flex items-center justify-center text-xl">
+                                    <i class="fa-solid fa-bullseye"></i>
+                                </div>
+                                <div>
+                                    <div class="text-xs text-slate-400 font-medium">Conversion Rate</div>
+                                    <div class="text-lg font-bold text-brand-lime">+42% Crecimiento</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- MARQUEE TICKER DE HABILIDADES -->
+    <div class="bg-brand-lime text-brand-dark py-3.5 overflow-hidden font-bold text-sm uppercase tracking-wider border-y border-brand-dark/10">
+        <div class="flex whitespace-nowrap animate-marquee">
+            <span class="mx-6 flex items-center gap-2"><i class="fa-solid fa-asterisk text-xs"></i> Digital Paid Media</span>
+            <span class="mx-6 flex items-center gap-2"><i class="fa-solid fa-asterisk text-xs"></i> CRM & Automation</span>
+            <span class="mx-6 flex items-center gap-2"><i class="fa-solid fa-asterisk text-xs"></i> Data Analytics & BI</span>
+            <span class="mx-6 flex items-center gap-2"><i class="fa-solid fa-asterisk text-xs"></i> Social Media Strategy</span>
+            <span class="mx-6 flex items-center gap-2"><i class="fa-solid fa-asterisk text-xs"></i> Web UX/UI & CRO</span>
+            <span class="mx-6 flex items-center gap-2"><i class="fa-solid fa-asterisk text-xs"></i> Lead Generation</span>
+            <span class="mx-6 flex items-center gap-2"><i class="fa-solid fa-asterisk text-xs"></i> Trade & Alliances</span>
+            <span class="mx-6 flex items-center gap-2"><i class="fa-solid fa-asterisk text-xs"></i> Digital Paid Media</span>
+            <span class="mx-6 flex items-center gap-2"><i class="fa-solid fa-asterisk text-xs"></i> CRM & Automation</span>
+            <span class="mx-6 flex items-center gap-2"><i class="fa-solid fa-asterisk text-xs"></i> Data Analytics & BI</span>
+            <span class="mx-6 flex items-center gap-2"><i class="fa-solid fa-asterisk text-xs"></i> Social Media Strategy</span>
+            <span class="mx-6 flex items-center gap-2"><i class="fa-solid fa-asterisk text-xs"></i> Web UX/UI & CRO</span>
+        </div>
+    </div>
+
+    <!-- RESUMEN CON CIFRAS CLAVES -->
+    <section id="resumen" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="max-w-3xl mb-16">
+                <span class="text-xs font-bold uppercase tracking-wider text-brand-card bg-brand-lime/30 px-3 py-1 rounded-full border border-brand-lime/50">Resumen Ejecutivo</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-dark mt-3 tracking-tight">Estratega Práctico impulsado por Resultados de Negocio</h2>
+                <p class="text-slate-600 text-lg mt-4 leading-relaxed">
+                    Especializado en conectar las metas comerciales con ejecuciones técnicas de marketing: desde la arquitectura de captación hasta el análisis detallado del LTV. Experiencia liderando proyectos multidisciplinarios en entornos corporativos y agencias de alto rendimiento.
+                </p>
+            </div>
+
+            <!-- KPI Cards Grid -->
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- KPI 1 -->
+                <div class="bg-brand-cream p-8 rounded-3xl border border-slate-200/80 hover:border-brand-card transition-all group">
+                    <div class="w-12 h-12 rounded-2xl bg-brand-dark text-brand-lime flex items-center justify-center text-xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-briefcase"></i>
+                    </div>
+                    <div class="text-4xl sm:text-5xl font-extrabold text-brand-dark tracking-tight">+5</div>
+                    <div class="text-sm font-semibold text-slate-500 uppercase tracking-wider mt-2">Años de Experiencia</div>
+                    <p class="text-xs text-slate-600 mt-2">Liderando estrategias integrales de marketing B2B y B2C.</p>
+                </div>
+
+                <!-- KPI 2 -->
+                <div class="bg-brand-cream p-8 rounded-3xl border border-slate-200/80 hover:border-brand-card transition-all group">
+                    <div class="w-12 h-12 rounded-2xl bg-brand-dark text-brand-lime flex items-center justify-center text-xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <div class="text-4xl sm:text-5xl font-extrabold text-brand-dark tracking-tight">+150%</div>
+                    <div class="text-sm font-semibold text-slate-500 uppercase tracking-wider mt-2">ROAS Promedio</div>
+                    <p class="text-xs text-slate-600 mt-2">En campañas multicanal con presupuesto asignado a performance.</p>
+                </div>
+
+                <!-- KPI 3 -->
+                <div class="bg-brand-cream p-8 rounded-3xl border border-slate-200/80 hover:border-brand-card transition-all group">
+                    <div class="w-12 h-12 rounded-2xl bg-brand-dark text-brand-lime flex items-center justify-center text-xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+                    <div class="text-4xl sm:text-5xl font-extrabold text-brand-dark tracking-tight">+50k</div>
+                    <div class="text-sm font-semibold text-slate-500 uppercase tracking-wider mt-2">Leads Calificados</div>
+                    <p class="text-xs text-slate-600 mt-2">Generados mediante flujos optimizados de conversión e Inbound.</p>
+                </div>
+
+                <!-- KPI 4 -->
+                <div class="bg-brand-cream p-8 rounded-3xl border border-slate-200/80 hover:border-brand-card transition-all group">
+                    <div class="w-12 h-12 rounded-2xl bg-brand-dark text-brand-lime flex items-center justify-center text-xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-folder-open"></i>
+                    </div>
+                    <div class="text-4xl sm:text-5xl font-extrabold text-brand-dark tracking-tight">9</div>
+                    <div class="text-sm font-semibold text-slate-500 uppercase tracking-wider mt-2">Casos de Éxito</div>
+                    <p class="text-xs text-slate-600 mt-2">Documentados formalmente en este portafolio estratégico.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CASOS DE ESTUDIO (SECTION) -->
+    <section id="casos" class="py-20 bg-brand-cream border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Section Header -->
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+                <div>
+                    <span class="text-xs font-bold uppercase tracking-wider text-brand-card bg-brand-lime/40 px-3 py-1 rounded-full">Portafolio</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-dark mt-3 tracking-tight">Casos de Estudio</h2>
+                    <p class="text-slate-600 mt-2">Explora ejecuciones estratégicas con materiales gráficos e impactos medibles.</p>
+                </div>
+
+                <!-- Category Filters -->
+                <div class="flex flex-wrap gap-2" id="filter-buttons">
+                    <button onclick="filterCases('all')" class="filter-btn active px-4 py-2 rounded-full text-xs font-bold transition-all bg-brand-dark text-brand-lime">
+                        Todos (9)
+                    </button>
+                    <button onclick="filterCases('digital')" class="filter-btn px-4 py-2 rounded-full text-xs font-bold bg-white text-slate-700 hover:bg-slate-200 transition-all border border-slate-200">
+                        Digital & Ads
+                    </button>
+                    <button onclick="filterCases('data')" class="filter-btn px-4 py-2 rounded-full text-xs font-bold bg-white text-slate-700 hover:bg-slate-200 transition-all border border-slate-200">
+                        Data & CRM
+                    </button>
+                    <button onclick="filterCases('social')" class="filter-btn px-4 py-2 rounded-full text-xs font-bold bg-white text-slate-700 hover:bg-slate-200 transition-all border border-slate-200">
+                        Social & Brand
+                    </button>
+                    <button onclick="filterCases('internal')" class="filter-btn px-4 py-2 rounded-full text-xs font-bold bg-white text-slate-700 hover:bg-slate-200 transition-all border border-slate-200">
+                        Alianzas & Interno
+                    </button>
+                </div>
+            </div>
+
+            <!-- Grid de Tarjetas de Casos -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="cases-grid">
+                
+                <!-- Caso 3.1: Desarrollo Sitio Web -->
+                <div class="case-card bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all flex flex-col justify-between" data-category="digital">
+                    <div>
+                        <div class="relative h-48 bg-slate-100 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=700&q=80" alt="Nuevo Sitio Web" class="w-full h-full object-cover">
+                            <span class="absolute top-4 left-4 bg-brand-dark/90 text-brand-lime text-xs font-bold px-3 py-1 rounded-full backdrop-blur-sm">3.1 Web Design & UX</span>
+                            <span class="absolute bottom-4 right-4 bg-white/90 text-slate-800 text-xs font-semibold px-2.5 py-1 rounded-lg backdrop-blur-sm border border-slate-200">
+                                <i class="fa-solid fa-photo-film text-brand-card"></i> 4 Mockups UX
+                            </span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-brand-dark mb-2">Desarrollo de nuevo sitio web</h3>
+                            <p class="text-slate-600 text-sm mb-4 line-clamp-2">Rediseño centrado en conversión (CRO), optimización SEO on-page y arquitectura rápida de navegación para producto SaaS/Corporativo.</p>
+                            
+                            <div class="flex items-center gap-3 pt-2 border-t border-slate-100">
+                                <div class="bg-brand-cream px-3 py-1.5 rounded-xl border border-slate-200 text-center">
+                                    <div class="text-xs text-slate-500 font-medium">Conversión</div>
+                                    <div class="text-sm font-bold text-brand-dark">+185%</div>
+                                </div>
+                                <div class="bg-brand-cream px-3 py-1.5 rounded-xl border border-slate-200 text-center">
+                                    <div class="text-xs text-slate-500 font-medium">Page Speed</div>
+                                    <div class="text-sm font-bold text-brand-dark">98/100</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <button onclick="openModal(1)" class="w-full py-3 rounded-2xl bg-brand-cream hover:bg-brand-dark hover:text-white text-brand-dark font-bold text-sm transition-all border border-slate-300 flex items-center justify-center gap-2">
+                            Ver Caso Completo <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Caso 3.2: Campaña Comodoro -->
+                <div class="case-card bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all flex flex-col justify-between" data-category="digital">
+                    <div>
+                        <div class="relative h-48 bg-slate-100 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1533750349088-cd871a92f312?auto=format&fit=crop&w=700&q=80" alt="Campaña Comodoro" class="w-full h-full object-cover">
+                            <span class="absolute top-4 left-4 bg-brand-dark/90 text-brand-lime text-xs font-bold px-3 py-1 rounded-full backdrop-blur-sm">3.2 Geo Marketing</span>
+                            <span class="absolute bottom-4 right-4 bg-white/90 text-slate-800 text-xs font-semibold px-2.5 py-1 rounded-lg backdrop-blur-sm border border-slate-200">
+                                <i class="fa-solid fa-image text-brand-card"></i> Arte & Vías Públicas
+                            </span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-brand-dark mb-2">Campaña de lanzamiento en Comodoro</h3>
+                            <p class="text-slate-600 text-sm mb-4 line-clamp-2">Estrategia híbrida de posicionamiento regional (OOH + Meta Ads geolocalizados) para apertura de nueva sucursal comercial.</p>
+                            
+                            <div class="flex items-center gap-3 pt-2 border-t border-slate-100">
+                                <div class="bg-brand-cream px-3 py-1.5 rounded-xl border border-slate-200 text-center">
+                                    <div class="text-xs text-slate-500 font-medium">Alcance Local</div>
+                                    <div class="text-sm font-bold text-brand-dark">120k Pers.</div>
+                                </div>
+                                <div class="bg-brand-cream px-3 py-1.5 rounded-xl border border-slate-200 text-center">
+                                    <div class="text-xs text-slate-500 font-medium">Asistencia</div>
+                                    <div class="text-sm font-bold text-brand-dark">+450 Leads</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <button onclick="openModal(2)" class="w-full py-3 rounded-2xl bg-brand-cream hover:bg-brand-dark hover:text-white text-brand-dark font-bold text-sm transition-all border border-slate-300 flex items-center justify-center gap-2">
+                            Ver Caso Completo <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Caso 3.3: Automatización CRM -->
+                <div class="case-card bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all flex flex-col justify-between" data-category="data">
+                    <div>
+                        <div class="relative h-48 bg-slate-100 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=700&q=80" alt="Automatización CRM" class="w-full h-full object-cover">
+                            <span class="absolute top-4 left-4 bg-brand-dark/90 text-brand-lime text-xs font-bold px-3 py-1 rounded-full backdrop-blur-sm">3.3 Automation & Sales</span>
+                            <span class="absolute bottom-4 right-4 bg-white/90 text-slate-800 text-xs font-semibold px-2.5 py-1 rounded-lg backdrop-blur-sm border border-slate-200">
+                                <i class="fa-solid fa-diagram-project text-brand-card"></i> Diagrama de Flujos
+                            </span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-brand-dark mb-2">Automatización de Leads al CRM</h3>
+                            <p class="text-slate-600 text-sm mb-4 line-clamp-2">Integración de formulación web y pauta publicitaria directamente a HubSpot/Salesforce con lead scoring automatizado.</p>
+                            
+                            <div class="flex items-center gap-3 pt-2 border-t border-slate-100">
+                                <div class="bg-brand-cream px-3 py-1.5 rounded-xl border border-slate-200 text-center">
+                                    <div class="text-xs text-slate-500 font-medium">Atención Lead</div>
+                                    <div class="text-sm font-bold text-brand-dark">-80% Tiempo</div>
+                                </div>
+                                <div class="bg-brand-cream px-3 py-1.5 rounded-xl border border-slate-200 text-center">
+                                    <div class="text-xs text-slate-500 font-medium">Conversión Ventas</div>
+                                    <div class="text-sm font-bold text-brand-dark">+24%</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <button onclick="openModal(3)" class="w-full py-3 rounded-2xl bg-brand-cream hover:bg-brand-dark hover:text-white text-brand-dark font-bold text-sm transition-all border border-slate-300 flex items-center justify-center gap-2">
+                            Ver Caso Completo <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Caso 3.4: Tablero Analytics -->
+                <div class="case-card bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all flex flex-col justify-between" data-category="data">
+                    <div>
+                        <div class="relative h-48 bg-slate-100 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=700&q=80" alt="Tablero Data Analytics" class="w-full h-full object-cover">
+                            <span class="absolute top-4 left-4 bg-brand-dark/90 text-brand-lime text-xs font-bold px-3 py-1 rounded-full backdrop-blur-sm">3.4 Business Intelligence</span>
+                            <span class="absolute bottom-4 right-4 bg-white/90 text-slate-800 text-xs font-semibold px-2.5 py-1 rounded-lg backdrop-blur-sm border border-slate-200">
+                                <i class="fa-solid fa-chart-pie text-brand-card"></i> Dashboard Looker Studio
+                            </span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-brand-dark mb-2">Tablero de Data Analytics</h3>
+                            <p class="text-slate-600 text-sm mb-4 line-clamp-2">Construcción de dashboard centralizado en Looker Studio para seguimiento en tiempo real de CAC, LTV y atribución multicanal.</p>
+                            
+                            <div class="flex items-center gap-3 pt-2 border-t border-slate-100">
+                                <div class="bg-brand-cream px-3 py-1.5 rounded-xl border border-slate-200 text-center">
+                                    <div class="text-xs text-slate-500 font-medium">Fuentes de Data</div>
+                                    <div class="text-sm font-bold text-brand-dark">6 Apis</div>
+                                </div>
+                                <div class="bg-brand-cream px-3 py-1.5 rounded-xl border border-slate-200 text-center">
+                                    <div class="text-xs text-slate-500 font-medium">Ahorro Horas</div>
+                                    <div class="text-sm font-bold text-brand-dark">15h / Mes</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <button onclick="openModal(4)" class="w-full py-3 rounded-2xl bg-brand-cream hover:bg-brand-dark hover:text-white text-brand-dark font-bold text-sm transition-all border border-slate-300 flex items-center justify-center gap-2">
+                            Ver Caso Completo <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Caso 3.5: Pauta Digital -->
+                <div class="case-card bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all flex flex-col justify-between" data-category="digital">
+                    <div>
+                        <div class="relative h-48 bg-slate-100 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=700&q=80" alt="Pauta Digital" class="w-full h-full object-cover">
+                            <span class="absolute top-4 left-4 bg-brand-dark/90 text-brand-lime text-xs font-bold px-3 py-1 rounded-full backdrop-blur-sm">3.5 Performance Ads</span>
+                            <span class="absolute bottom-4 right-4 bg-white/90 text-slate-800 text-xs font-semibold px-2.5 py-1 rounded-lg backdrop-blur-sm border border-slate-200">
+                                <i class="fa-solid fa-[#0B2B1B] fa-sliders text-brand-card"></i> Reporte A/B Testing
+                            </span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-brand-dark mb-2">Seguimiento de Pauta Digital</h3>
+                            <p class="text-slate-600 text-sm mb-4 line-clamp-2">Administración y optimización semanal de presupuestos de Ads en Google Search, Meta Ads y LinkedIn Ads con estrategia CPL agresiva.</p>
+                            
+                            <div class="flex items-center gap-3 pt-2 border-t border-slate-100">
+                                <div class="bg-brand-cream px-3 py-1.5 rounded-xl border border-slate-200 text-center">
+                                    <div class="text-xs text-slate-500 font-medium">Reducción CPL</div>
+                                    <div class="text-sm font-bold text-brand-dark">-32%</div>
+                                </div>
+                                <div class="bg-brand-cream px-3 py-1.5 rounded-xl border border-slate-200 text-center">
+                                    <div class="text-xs text-slate-500 font-medium">ROAS Global</div>
+                                    <div class="text-sm font-bold text-brand-dark">4.2x</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <button onclick="openModal(5)" class="w-full py-3 rounded-2xl bg-brand-cream hover:bg-brand-dark hover:text-white text-brand-dark font-bold text-sm transition-all border border-slate-300 flex items-center justify-center gap-2">
+                            Ver Caso Completo <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Caso 3.6: Social Media Planes -->
+                <div class="case-card bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all flex flex-col justify-between" data-category="social">
+                    <div>
+                        <div class="relative h-48 bg-slate-100 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=700&q=80" alt="Social Media Strategy" class="w-full h-full object-cover">
+                            <span class="absolute top-4 left-4 bg-brand-dark/90 text-brand-lime text-xs font-bold px-3 py-1 rounded-full backdrop-blur-sm">3.6 Social Strategy</span>
+                            <span class="absolute bottom-4 right-4 bg-white/90 text-slate-800 text-xs font-semibold px-2.5 py-1 rounded-lg backdrop-blur-sm border border-slate-200">
+                                <i class="fa-solid fa-[#0B2B1B] fa-hashtag text-brand-card"></i> Content Grid & Video
+                            </span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-brand-dark mb-2">Planes de Social Media Integrados</h3>
+                            <p class="text-slate-600 text-sm mb-4 line-clamp-2">Planificación de contenido omnicanal para LinkedIn, Instagram, Facebook y TikTok con pilares de marca y video corto (Reels/TikTok).</p>
+                            
+                            <div class="flex items-center gap-3 pt-2 border-t border-slate-100">
+                                <div class="bg-brand-cream px-3 py-1.5 rounded-xl border border-slate-200 text-center">
+                                    <div class="text-xs text-slate-500 font-medium">Engagement Rate</div>
+                                    <div class="text-sm font-bold text-brand-dark">6.4%</div>
+                                </div>
+                                <div class="bg-brand-cream px-3 py-1.5 rounded-xl border border-slate-200 text-center">
+                                    <div class="text-xs text-slate-500 font-medium">Comunidad</div>
+                                    <div class="text-sm font-bold text-brand-dark">+28k Seg.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <button onclick="openModal(6)" class="w-full py-3 rounded-2xl bg-brand-cream hover:bg-brand-dark hover:text-white text-brand-dark font-bold text-sm transition-all border border-slate-300 flex items-center justify-center gap-2">
+                            Ver Caso Completo <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Caso 3.7: Alianzas Comerciales -->
+                <div class="case-card bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all flex flex-col justify-between" data-category="internal">
+                    <div>
+                        <div class="relative h-48 bg-slate-100 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=700&q=80" alt="Alianzas Comerciales" class="w-full h-full object-cover">
+                            <span class="absolute top-4 left-4 bg-brand-dark/90 text-brand-lime text-xs font-bold px-3 py-1 rounded-full backdrop-blur-sm">3.7 Trade & Partnerships</span>
+                            <span class="absolute bottom-4 right-4 bg-white/90 text-slate-800 text-xs font-semibold px-2.5 py-1 rounded-lg backdrop-blur-sm border border-slate-200">
+                                <i class="fa-solid fa-handshake text-brand-card"></i> Acuerdos B2B
+                            </span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-brand-dark mb-2">Gestión de Alianzas Comerciales</h3>
+                            <p class="text-slate-600 text-sm mb-4 line-clamp-2">Estrategia de co-marketing con marcas estratégicas del sector para la adquisición cruzada de usuarios y reducción de costes directos.</p>
+                            
+                            <div class="flex items-center gap-3 pt-2 border-t border-slate-100">
+                                <div class="bg-brand-cream px-3 py-1.5 rounded-xl border border-slate-200 text-center">
+                                    <div class="text-xs text-slate-500 font-medium">Acuerdos Creados</div>
+                                    <div class="text-sm font-bold text-brand-dark">12 Marcas</div>
+                                </div>
+                                <div class="bg-brand-cream px-3 py-1.5 rounded-xl border border-slate-200 text-center">
+                                    <div class="text-xs text-slate-500 font-medium">Nuevos Clientes</div>
+                                    <div class="text-sm font-bold text-brand-dark">+1.2k</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <button onclick="openModal(7)" class="w-full py-3 rounded-2xl bg-brand-cream hover:bg-brand-dark hover:text-white text-brand-dark font-bold text-sm transition-all border border-slate-300 flex items-center justify-center gap-2">
+                            Ver Caso Completo <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Caso 3.8: Marketing Interno -->
+                <div class="case-card bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all flex flex-col justify-between" data-category="internal">
+                    <div>
+                        <div class="relative h-48 bg-slate-100 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=700&q=80" alt="Marketing Interno" class="w-full h-full object-cover">
+                            <span class="absolute top-4 left-4 bg-brand-dark/90 text-brand-lime text-xs font-bold px-3 py-1 rounded-full backdrop-blur-sm">3.8 Employer Branding</span>
+                            <span class="absolute bottom-4 right-4 bg-white/90 text-slate-800 text-xs font-semibold px-2.5 py-1 rounded-lg backdrop-blur-sm border border-slate-200">
+                                <i class="fa-solid fa-people-group text-brand-card"></i> Eventos & Newsletter
+                            </span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-brand-dark mb-2">Acciones de Marketing Interno</h3>
+                            <p class="text-slate-600 text-sm mb-4 line-clamp-2">Programa de comunicación interna, alineamiento de cultura corporativa de cara a lanzamientos y Employee Advocacy en LinkedIn.</p>
+                            
+                            <div class="flex items-center gap-3 pt-2 border-t border-slate-100">
+                                <div class="bg-brand-cream px-3 py-1.5 rounded-xl border border-slate-200 text-center">
+                                    <div class="text-xs text-slate-500 font-medium">Participación</div>
+                                    <div class="text-sm font-bold text-brand-dark">92% Team</div>
+                                </div>
+                                <div class="bg-brand-cream px-3 py-1.5 rounded-xl border border-slate-200 text-center">
+                                    <div class="text-xs text-slate-500 font-medium">eNPS Score</div>
+                                    <div class="text-sm font-bold text-brand-dark">+68</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <button onclick="openModal(8)" class="w-full py-3 rounded-2xl bg-brand-cream hover:bg-brand-dark hover:text-white text-brand-dark font-bold text-sm transition-all border border-slate-300 flex items-center justify-center gap-2">
+                            Ver Caso Completo <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Caso 3.9: Reporting Executive -->
+                <div class="case-card bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all flex flex-col justify-between" data-category="data">
+                    <div>
+                        <div class="relative h-48 bg-slate-100 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=700&q=80" alt="Executive Reporting" class="w-full h-full object-cover">
+                            <span class="absolute top-4 left-4 bg-brand-dark/90 text-brand-lime text-xs font-bold px-3 py-1 rounded-full backdrop-blur-sm">3.9 Executive Reporting</span>
+                            <span class="absolute bottom-4 right-4 bg-white/90 text-slate-800 text-xs font-semibold px-2.5 py-1 rounded-lg backdrop-blur-sm border border-slate-200">
+                                <i class="fa-solid fa-file-invoice text-brand-card"></i> Informes C-Level
+                            </span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-brand-dark mb-2">Sistema de Reporting Ejecutivo</h3>
+                            <p class="text-slate-600 text-sm mb-4 line-clamp-2">Estructuración de reportes mensules simplificados para la dirección/C-Level relacionando la inversión en marketing con ingresos reales.</p>
+                            
+                            <div class="flex items-center gap-3 pt-2 border-t border-slate-100">
+                                <div class="bg-brand-cream px-3 py-1.5 rounded-xl border border-slate-200 text-center">
+                                    <div class="text-xs text-slate-500 font-medium">Claridad Data</div>
+                                    <div class="text-sm font-bold text-brand-dark">100% ROI Track</div>
+                                </div>
+                                <div class="bg-brand-cream px-3 py-1.5 rounded-xl border border-slate-200 text-center">
+                                    <div class="text-xs text-slate-500 font-medium">Frecuencia</div>
+                                    <div class="text-sm font-bold text-brand-dark">Mensual</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <button onclick="openModal(9)" class="w-full py-3 rounded-2xl bg-brand-cream hover:bg-brand-dark hover:text-white text-brand-dark font-bold text-sm transition-all border border-slate-300 flex items-center justify-center gap-2">
+                            Ver Caso Completo <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CALL TO ACTION & CONTACTO -->
+    <section id="contacto" class="py-20 bg-brand-dark text-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-brand-card rounded-3xl border border-brand-border p-8 sm:p-12 lg:p-16 relative overflow-hidden">
+                
+                <div class="grid lg:grid-cols-12 gap-12 items-center">
+                    
+                    <div class="lg:col-span-6 space-y-6">
+                        <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-dark text-brand-lime text-xs font-bold border border-brand-border">
+                            <i class="fa-solid fa-paper-plane"></i> HABLEMOS DE TU PRÓXIMO RETO
+                        </span>
+                        
+                        <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight">
+                            ¿Listo para llevar tu marketing al <span class="text-brand-lime">siguiente nivel</span>?
+                        </h2>
+                        
+                        <p class="text-slate-300 text-base sm:text-lg leading-relaxed">
+                            Si buscas un perfil de Marketing Specialist dinámico, analítico y centrado en resultados reales de negocio, envíame un mensaje y coordinemos una llamada.
+                        </p>
+
+                        <div class="space-y-4 pt-4">
+                            <a href="mailto:tuemail@ejemplo.com" class="flex items-center gap-4 text-slate-300 hover:text-brand-lime transition-colors group">
+                                <div class="w-12 h-12 rounded-2xl bg-brand-dark flex items-center justify-center text-brand-lime border border-brand-border group-hover:border-brand-lime">
+                                    <i class="fa-solid fa-envelope text-lg"></i>
+                                </div>
+                                <div>
+                                    <div class="text-xs text-slate-400 font-medium">Email Directo</div>
+                                    <div class="text-base font-bold text-white">agenteizaguirre@gmail.com</div>
+                                </div>
+                            </a>
+
+                            <a href="https://linkedin.com" target="_blank" class="flex items-center gap-4 text-slate-300 hover:text-brand-lime transition-colors group">
+                                <div class="w-12 h-12 rounded-2xl bg-brand-dark flex items-center justify-center text-brand-lime border border-brand-border group-hover:border-brand-lime">
+                                    <i class="fa-brands fa-linkedin-in text-lg"></i>
+                                </div>
+                                <div>
+                                    <div class="text-xs text-slate-400 font-medium">Perfil Profesional</div>
+                                    <div class="text-base font-bold text-white">https://www.linkedin.com/in/alex-izaguirre-mkt/</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Formulario de Contacto -->
+                    <div class="lg:col-span-6">
+                        <form id="contact-form" onsubmit="handleFormSubmit(event)" class="bg-brand-dark p-6 sm:p-8 rounded-3xl border border-brand-border space-y-4 shadow-xl">
+                            <h3 class="text-xl font-bold text-white mb-2">Enviar un Mensaje</h3>
+                            
+                            <div>
+                                <label class="block text-xs font-bold text-slate-300 uppercase mb-1">Nombre Completo</label>
+                                <input type="text" required placeholder="Ej: Maria Gonzalez" class="w-full px-4 py-3 rounded-xl bg-slate-900/80 border border-brand-border text-white text-sm focus:outline-none focus:border-brand-lime transition-colors">
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-bold text-slate-300 uppercase mb-1">Correo Electrónico</label>
+                                <input type="email" required placeholder="tu@empresa.com" class="w-full px-4 py-3 rounded-xl bg-slate-900/80 border border-brand-border text-white text-sm focus:outline-none focus:border-brand-lime transition-colors">
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-bold text-slate-300 uppercase mb-1">Mensaje o Detalle del Proyecto</label>
+                                <textarea rows="4" required placeholder="Cuéntame sobre tu empresa, objetivos o rol disponible..." class="w-full px-4 py-3 rounded-xl bg-slate-900/80 border border-brand-border text-white text-sm focus:outline-none focus:border-brand-lime transition-colors"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full py-4 rounded-xl bg-brand-lime hover:bg-brand-limeHover text-brand-dark font-extrabold text-sm transition-all shadow-lg shadow-brand-lime/20 flex items-center justify-center gap-2">
+                                Enviar Mensaje Directo <i class="fa-solid fa-paper-plane"></i>
+                            </button>
+
+                            <div id="form-feedback" class="hidden text-center text-xs font-semibold py-2 rounded-xl bg-brand-lime/20 text-brand-lime border border-brand-lime/30">
+                                ¡Mensaje recibido! Te responderé en menos de 24 horas.
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-brand-dark border-t border-brand-border text-slate-400 text-sm py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-2">
+                <span class="w-6 h-6 rounded-lg bg-brand-lime text-brand-dark flex items-center justify-center font-bold text-xs">MS</span>
+                <span class="text-white font-semibold">Marketing Specialist Portfolio</span>
+            </div>
+            <p class="text-xs text-slate-500">© 2026 Todos los derechos reservados. Diseñado para alto impacto.</p>
+        </div>
+    </footer>
+
+
+    <!-- MODAL DETALLE DE CASO DE ESTUDIO (DINÁMICO) -->
+    <div id="case-modal" class="fixed inset-0 z-50 hidden bg-brand-dark/80 backdrop-blur-md flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
+        <div class="bg-white rounded-3xl max-w-3xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-slate-200 relative my-auto animate-in fade-in zoom-in-95 duration-200">
+            
+            <!-- Modal Header -->
+            <div class="p-6 sm:p-8 bg-brand-dark text-white rounded-t-3xl relative">
+                <button onclick="closeModal()" class="absolute top-6 right-6 w-10 h-10 rounded-full bg-brand-card hover:bg-brand-light text-slate-300 hover:text-white flex items-center justify-center transition-colors">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+                <span id="modal-category" class="inline-block bg-brand-lime text-brand-dark text-xs font-extrabold px-3 py-1 rounded-full mb-3">Categoría</span>
+                <h3 id="modal-title" class="text-2xl sm:text-3xl font-extrabold">Título del Caso de Estudio</h3>
+            </div>
+
+            <!-- Modal Body -->
+            <div class="p-6 sm:p-8 space-y-6 text-slate-700">
+                
+                <!-- Desafío vs Solución -->
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-brand-cream p-5 rounded-2xl border border-slate-200">
+                        <h4 class="font-bold text-brand-dark text-sm uppercase tracking-wide mb-2 flex items-center gap-2">
+                            <i class="fa-solid fa-triangle-exclamation text-amber-500"></i> El Desafío
+                        </h4>
+                        <p id="modal-challenge" class="text-sm leading-relaxed text-slate-600">Descripción del desafío inicial...</p>
+                    </div>
+
+                    <div class="bg-brand-cream p-5 rounded-2xl border border-slate-200">
+                        <h4 class="font-bold text-brand-dark text-sm uppercase tracking-wide mb-2 flex items-center gap-2">
+                            <i class="fa-solid fa-lightbulb text-brand-card"></i> La Solución
+                        </h4>
+                        <p id="modal-solution" class="text-sm leading-relaxed text-slate-600">Descripción de la estrategia ejecutada...</p>
+                    </div>
+                </div>
+
+                <!-- Métricas Impacto -->
+                <div>
+                    <h4 class="font-bold text-brand-dark text-sm uppercase tracking-wide mb-3">Resultados Clave Medibles</h4>
+                    <div id="modal-metrics" class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                        <!-- Dynamic Metric Cards Inserted Here -->
+                    </div>
+                </div>
+
+                <!-- Galería / Material Gráfico de Referencia -->
+                <div>
+                    <h4 class="font-bold text-brand-dark text-sm uppercase tracking-wide mb-3 flex items-center justify-between">
+                        <span>Material Gráfico & Evidencia</span>
+                        <span id="modal-resource-badge" class="text-xs font-normal text-slate-500 bg-slate-100 px-2.5 py-1 rounded-md">Recursos adjuntos</span>
+                    </h4>
+                    
+                    <div id="modal-gallery" class="grid sm:grid-cols-2 gap-4">
+                        <!-- Dynamic Image Mockups inserted here -->
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Modal Footer -->
+            <div class="p-6 bg-slate-50 border-t border-slate-200 rounded-b-3xl flex justify-end">
+                <button onclick="closeModal()" class="px-6 py-2.5 rounded-full bg-brand-dark text-white font-bold text-sm hover:bg-brand-card transition-colors">
+                    Cerrar Caso
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT LÓGICA DE NAVEGACIÓN Y MODALES -->
+    <script>
+        // Datos extensos de los 9 Casos de Estudio
+        const casesData = {
+            1: {
+                title: "Desarrollo de nuevo sitio web",
+                category: "3.1 Web Design & CRO",
+                challenge: "El sitio anterior poseía una tasa de rebote del 68% y no estaba optimizado para conversión ni dispositivos móviles, perdiendo potenciales clientes en B2B.",
+                solution: "Rediseño completo de la arquitectura web con enfoque 'Mobile-First', implementación de copys persuasivos, tiempos de carga optimizados y formularios integrados directamente al pipeline de ventas.",
+                metrics: [
+                    { label: "Tasa Conversión", value: "+185%" },
+                    { label: "Velocidad Load", value: "1.2s" },
+                    { label: "Tasa Rebote", value: "-40%" }
+                ],
+                resourcesCount: "4 Mockups UX/UI",
+                images: [
+                    "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80",
+                    "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=600&q=80"
+                ]
+            },
+            2: {
+                title: "Campaña de lanzamiento en Comodoro",
+                category: "3.2 Geo Marketing & PR",
+                challenge: "Falta de reconocimiento de marca en la región patagónica para la apertura del nuevo local comercial, con fuerte competencia local afianzada.",
+                solution: "Estrategia híbrida 360° combinando cartelería en vía pública (OOH), pauta geo-localizada en Meta Ads con radio de 10km y activaciones con influencers locales.",
+                metrics: [
+                    { label: "Alcance Único", value: "120,000" },
+                    { label: "Leads Evento", value: "+450" },
+                    { label: "ROAS Apertura", value: "3.5x" }
+                ],
+                resourcesCount: "3 Artes Vía Pública + Ads",
+                images: [
+                    "https://images.unsplash.com/photo-1533750349088-cd871a92f312?auto=format&fit=crop&w=600&q=80"
+                ]
+            },
+            3: {
+                title: "Automatización de Leads al CRM",
+                category: "3.3 Automation & CRM",
+                challenge: "Los prospectos tardaban más de 24 horas en ser contactados debido a procesos manuales en hojas de cálculo, perdiendo temperatura comercial.",
+                solution: "Implementación de flujos integrados mediante Make/Zapier conectando formularios de Facebook & Web con el CRM (HubSpot). Notificaciones instantáneas al equipo comercial.",
+                metrics: [
+                    { label: "Tiempo Respuesta", value: "5 min" },
+                    { label: "Conversión a Venta", value: "+24%" },
+                    { label: "Errores Manuales", value: "0%" }
+                ],
+                resourcesCount: "Diagrama de Flujos CRM",
+                images: [
+                    "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80"
+                ]
+            },
+            4: {
+                title: "Tablero de Data Analytics",
+                category: "3.4 Analytics & BI",
+                challenge: "Información fragmentada en múltiples plataformas (Google Ads, Meta, Analytics, Stripe) complicaba la toma de decisiones presupuestarias estratégicas.",
+                solution: "Diseño de un dashboard unificado e interactivo en Looker Studio (Google Data Studio) consolidando métricas clave como CAC, LTV, ROAS y Atribución.",
+                metrics: [
+                    { label: "Fuentes Conectadas", value: "6 APIs" },
+                    { label: "Ahorro Reportes", value: "15h/mes" },
+                    { label: "Precisión Data", value: "100%" }
+                ],
+                resourcesCount: "Dashboard Interactivo",
+                images: [
+                    "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=600&q=80"
+                ]
+            },
+            5: {
+                title: "Seguimiento de Pauta Digital",
+                category: "3.5 Performance Media",
+                challenge: "Alto Costo por Clic (CPC) e ineficiente asignación de presupuesto publicitario en campañas activas de retargeting y prospectación.",
+                solution: "Estructura de campaña reorganizada por etapas del embudo (TOFU-MOFU-BOFU), testeo continuo A/B de creativos y audiencias Lookalike.",
+                metrics: [
+                    { label: "CPL Promedio", value: "-32%" },
+                    { label: "ROAS Global", value: "4.2x" },
+                    { label: "Inversión Admin.", value: "$50k+" }
+                ],
+                resourcesCount: "Reportes A/B & Screenshots",
+                images: [
+                    "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=600&q=80"
+                ]
+            },
+            6: {
+                title: "Desarrollo de Planes de Social Media",
+                category: "3.6 Content & Social Media",
+                challenge: "Presencia estancada en redes sociales con publicaciones inconsistentes y bajo nivel de interacción comunitaria en LinkedIn e Instagram.",
+                solution: "Estrategia diferenciada por red: liderazgo de pensamiento en LinkedIn, video corto dinámico (Reels/TikTok) en Instagram y comunidad en Facebook.",
+                metrics: [
+                    { label: "Engagement Rate", value: "6.4%" },
+                    { label: "Nuevos Seguidores", value: "+28,000" },
+                    { label: "Impresiones Organic", value: "1.2M" }
+                ],
+                resourcesCount: "Grid de Contenidos & Calendario",
+                images: [
+                    "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=600&q=80"
+                ]
+            },
+            7: {
+                title: "Gestión de Alianzas Comerciales",
+                category: "3.7 Strategic Alliances",
+                challenge: "Necesidad de diversificar los canales de captación sin incrementar el gasto directo en pauta publicitaria paga.",
+                solution: "Identificación y negociación de acuerdos de co-marketing con marcas complementarias (webinars conjuntos, beneficios cruzados y mailing compartido).",
+                metrics: [
+                    { label: "Alianzas Creadas", value: "12 Marcas" },
+                    { label: "Leads Cualificados", value: "+1,200" },
+                    { label: "Costo Adquisición", value: "Casi $0" }
+                ],
+                resourcesCount: "Convenios & Artes Cruzados",
+                images: [
+                    "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=600&q=80"
+                ]
+            },
+            8: {
+                title: "Acciones de Marketing Interno",
+                category: "3.8 Internal Branding",
+                challenge: "Bajo nivel de adopción por parte del equipo interno frente a nuevos productos y falta de comunicación de logros corporativos.",
+                solution: "Desarrollo de boletín interno semanal, eventos de lanzamiento interno, kit de bienvenida digital y programa de embajadores de marca internos (Employee Advocacy).",
+                metrics: [
+                    { label: "Apertura Newsletter", value: "85%" },
+                    { label: "eNPS Score", value: "+68" },
+                    { label: "Participación", value: "92%" }
+                ],
+                resourcesCount: "Newsletters & Guías de Estilo",
+                images: [
+                    "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&q=80"
+                ]
+            },
+            9: {
+                title: "Reporting Ejecutivo y Presentaciones",
+                category: "3.9 C-Level Reporting",
+                challenge: "La alta dirección requería visualizar el impacto directo del presupuesto de marketing en las métricas de ingresos del negocio de forma simple.",
+                solution: "Creación de reporte mensual sintético de 1 página vinculando inversión publicitaria con pipeline cerrado y Retorno de Inversión (ROI).",
+                metrics: [
+                    { label: "Tiempo Lectura", value: "3 mins" },
+                    { label: "Aprobación Budget", value: "100%" },
+                    { label: "Claridad Data", value: "Excelente" }
+                ],
+                resourcesCount: "Plantilla PPT Exec & Reporte PDF",
+                images: [
+                    "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80"
+                ]
+            }
+        };
+
+        // Función abrir modal
+        function openModal(id) {
+            const data = casesData[id];
+            if (!data) return;
+
+            document.getElementById('modal-title').innerText = data.title;
+            document.getElementById('modal-category').innerText = data.category;
+            document.getElementById('modal-challenge').innerText = data.challenge;
+            document.getElementById('modal-solution').innerText = data.solution;
+            document.getElementById('modal-resource-badge').innerText = data.resourcesCount;
+
+            // Render Métricas
+            const metricsContainer = document.getElementById('modal-metrics');
+            metricsContainer.innerHTML = '';
+            data.metrics.forEach(m => {
+                metricsContainer.innerHTML += `
+                    <div class="bg-brand-cream p-4 rounded-xl border border-slate-200 text-center">
+                        <div class="text-xs text-slate-500 font-medium">${m.label}</div>
+                        <div class="text-xl font-extrabold text-brand-dark mt-1">${m.value}</div>
+                    </div>
+                `;
+            });
+
+            // Render Galería
+            const galleryContainer = document.getElementById('modal-gallery');
+            galleryContainer.innerHTML = '';
+            data.images.forEach(imgUrl => {
+                galleryContainer.innerHTML += `
+                    <div class="rounded-xl overflow-hidden border border-slate-200 bg-slate-100 h-44">
+                        <img src="${imgUrl}" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" alt="Evidencia Gráfica">
+                    </div>
+                `;
+            });
+
+            // Mostrar modal
+            const modal = document.getElementById('case-modal');
+            modal.classList.remove('hidden');
+            document.body.classList.add('overflow-hidden');
+        }
+
+        // Función cerrar modal
+        function closeModal() {
+            const modal = document.getElementById('case-modal');
+            modal.classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+        }
+
+        // Filtrado de casos por categoría
+        function filterCases(category) {
+            const cards = document.querySelectorAll('.case-card');
+            const buttons = document.querySelectorAll('.filter-btn');
+
+            // Actualizar estilo botones
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-brand-dark', 'text-brand-lime');
+                btn.classList.add('bg-white', 'text-slate-700');
+            });
+            event.target.classList.remove('bg-white', 'text-slate-700');
+            event.target.classList.add('bg-brand-dark', 'text-brand-lime');
+
+            // Filtrar cards
+            cards.forEach(card => {
+                if (category === 'all' || card.dataset.category === category) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Simular envío de formulario
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const feedback = document.getElementById('form-feedback');
+            feedback.classList.remove('hidden');
+            e.target.reset();
+            setTimeout(() => {
+                feedback.classList.add('hidden');
+            }, 5000);
+        }
+
+        // Simular descarga de CV
+        function downloadCV() {
+            const message = document.createElement('div');
+            message.className = 'fixed bottom-4 right-4 bg-brand-lime text-brand-dark font-bold px-6 py-3 rounded-2xl shadow-xl z-50 transition-all';
+            message.innerText = 'Descargando Currículum Vitae (PDF)...';
+            document.body.appendChild(message);
+            setTimeout(() => message.remove(), 3000);
+        }
+
+        // Toggle Menú Móvil
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
